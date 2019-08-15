@@ -46,8 +46,8 @@ namespace imi_wrapper
     uint64_t uvcStartTime = 0;
     uint64_t uvcCount = 0;
 
-    ImiFrameMode supportFrameMode[] = {{IMI_PIXEL_FORMAT_DEP_16BIT, 640, 480, 16, 30}, 
-                                       {IMI_PIXEL_FORMAT_DEP_16BIT, 320, 240, 16, 30}};
+    ImiFrameMode supportFrameMode[] = {{IMI_PIXEL_FORMAT_DEP_16BIT, 320, 240, 16, 30}, 
+                                       {IMI_PIXEL_FORMAT_DEP_16BIT, 640, 480, 16, 30}};
 
 	ImiCameraFrameMode supportCameraFrameMode[] = {{CAMERA_PIXEL_FORMAT_RGB888, 640, 480, 30}, 
                                                    {CAMERA_PIXEL_FORMAT_RGB888, 960, 720, 30},
@@ -62,7 +62,7 @@ namespace imi_wrapper
           cloud_subscribers_(false),
 	      uvc_subscribers_(false),
           config_init(false),
-          depthMode(0),
+          depthMode(1),
           colorMode(0)
 	{
         reconfigure_server_.reset(new ReconfigureServer(pnh_));
